@@ -4,7 +4,8 @@ var id = getUrlVars()["id"];
 
 var db;
 
-document.addEventListener("deviceready", onDeviceReady, false);
+//document.addEventListener("deviceready", onDeviceReady, false);
+window.onload=onDeviceReady;
 
 function onDeviceReady() {
 	console.log("opening database");
