@@ -3,7 +3,8 @@ var id = getUrlVars()["id"];
 
 var db;
 
-document.addEventListener("deviceready", onDeviceReady, false);
+//document.addEventListener("deviceready", onDeviceReady, false);
+window.onload=onDeviceReady;
 
 function onDeviceReady() {
     db = window.openDatabase("EmployeeDirectoryDB", "1.0", "PhoneGap Demo", 200000);
