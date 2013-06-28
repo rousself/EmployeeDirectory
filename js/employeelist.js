@@ -3,9 +3,11 @@ var dbCreated = false;
 
 var scroll = new iScroll('wrapper', { vScrollbar: false, hScrollbar:false, hScroll: false });
 
-document.addEventListener("deviceready", onDeviceReady, false);
+//document.addEventListener("deviceready", onDeviceReady, false);
+window.onload=onDeviceReady;
 
-function onDeviceReady() {
+
+function onDeviceReady() { 
     db = window.openDatabase("EmployeeDirectoryDB", "1.0", "PhoneGap Demo", 200000);
     if (dbCreated)
     	db.transaction(getEmployees, transaction_error);
